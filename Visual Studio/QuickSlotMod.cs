@@ -41,7 +41,7 @@ namespace OutwardQuickSlotMod
 
         public void LoadConfig()
         {
-            Debug.Log(":: Loading Config ::");
+            //Debug.Log(":: Loading Config ::");
             string json = File.ReadAllText(modConfigFile);
            
             modConfig = JSON.Parse(json);
@@ -50,27 +50,27 @@ namespace OutwardQuickSlotMod
         public void SetCurrentCharacter(string playerUID, string playerName)
         {
 
-            Debug.Log("Setting Current Character UID " + playerUID + " name " + playerName);
+            //Debug.Log("Setting Current Character UID " + playerUID + " name " + playerName);
             if (modConfig["characters"] != null)
             {
-                Debug.Log("Found Characters Array in Config File");
+                //Debug.Log("Found Characters Array in Config File");
 
                 if (DoesCharacterExist(playerUID))
                 {
-                    Debug.Log("Character Does Exist in Config File");
+                   // Debug.Log("Character Does Exist in Config File");
                     var charSaveIndex = GetCharacterSaveIndex(playerUID);
                     var charSaveObject = modConfig["characters"][charSaveIndex];
 
 
-                    Debug.Log("Setting as currentCharacter");
+                    //Debug.Log("Setting as currentCharacter");
                     currentCharacter = charSaveObject;
                 }
                 else
                 {
-                    Debug.Log("Character Does Not Exist in Config File");
+                    //Debug.Log("Character Does Not Exist in Config File");
 
 
-                    Debug.Log("Setting as currentCharacter");
+                    //Debug.Log("Setting as currentCharacter");
                     currentCharacter = CreateNewCharacterSave(playerUID, playerName);
                 }
 
@@ -118,7 +118,7 @@ namespace OutwardQuickSlotMod
         public JSONObject CreateNewCharacterSave(string characterUID, string characterName)
         {
 
-            Debug.Log("Adding a New Character");
+            //Debug.Log("Adding a New Character");
             var newplayerObject = new JSONObject();
             modConfig["characters"][-1] = newplayerObject;
 
@@ -161,7 +161,7 @@ namespace OutwardQuickSlotMod
 
         public void SaveConfig()
         {
-            Debug.Log(":: Saving Config ::");
+            //Debug.Log(":: Saving Config ::");
             //var newJson = JSON.ToJson(modConfig.ToString());
             File.WriteAllText(modConfigFile, modConfig.ToString());
         }

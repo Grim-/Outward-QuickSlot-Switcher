@@ -1,29 +1,4 @@
 {
    "characters":[
-      {
-         "characterUID":"MdOCp-AizUG5Ocof3gegfA",
-         "characterName":"Emo",
-         "keybind":"tab",
-         "DefaultBarIDS":[
-            8200010,
-            8100270,
-            4300110,
-            4300100,
-            0,
-            0,
-            0,
-            0
-         ],
-         "SecondaryBarIDS":[
-            8200300,
-            8100130,
-            8200010,
-            8100121,
-            8100261,
-            8200101,
-            8200031,
-            8100071
-         ]
-      }
    ]
 }

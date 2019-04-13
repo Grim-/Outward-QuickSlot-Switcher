@@ -133,7 +133,7 @@ namespace OutwardQuickSlotMod
 
             if (_itemToQuickSlot.QuickSlotIndex == -1)
             {
-                Debug.Log("On Assign Quick slot index is -1");
+                //Debug.Log("On Assign Quick slot index is -1");
             }
             else
             {
@@ -196,8 +196,6 @@ namespace OutwardQuickSlotMod
                         Debug.Log("ID of slot " + i + " from JSON is : " + itemID);
                     }
                     var item = charSkills.GetItemFromItemID(itemID.AsInt);
-                    Debug.Log("Item is");
-                    Debug.Log(item);
 
                     //this isnt a skill
                     if (item == null)
@@ -231,8 +229,6 @@ namespace OutwardQuickSlotMod
 						Debug.Log("ID of slot " + i + " from JSON is : " + itemID);
 					}
                     var item = charSkills.GetItemFromItemID(itemID.AsInt);
-                    Debug.Log("Item is");
-                    Debug.Log(item);
 
                     //this isnt a skill
                     if (item == null)
