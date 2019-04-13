@@ -1,0 +1,1 @@
+# Outward QuickSlot Switcher
